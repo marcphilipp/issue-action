@@ -7,6 +7,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.kohsuke:github-api:1.314")
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
 }
 
