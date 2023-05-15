@@ -4,6 +4,9 @@ import org.kohsuke.github.GitHub;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        System.out.println("Env vars:");
+        System.getenv().keySet().forEach(System.out::println);
+
         var token = System.getenv("GITHUB_TOKEN");
         if (token == null) {
             throw new IllegalArgumentException("GITHUB_TOKEN is not set");
