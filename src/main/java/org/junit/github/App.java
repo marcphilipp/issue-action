@@ -17,5 +17,9 @@ public class App {
         System.out.println("description = " + repo.getDescription());
         var openIssueCount = repo.getOpenIssueCount();
         System.out.println("openIssueCount = " + openIssueCount);
+        System.out.println();
+
+        System.out.println("Labels:");
+        repo.listLabels().forEach(System.out::println);
     }
 }
