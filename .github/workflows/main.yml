@@ -7,3 +7,8 @@ jobs:
       - uses: marcphilipp/issue-action@main
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          command: foo
+      - uses: marcphilipp/issue-action@main
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          command: bar
