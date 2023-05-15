@@ -7,9 +7,9 @@ public class App {
         System.out.println("Env vars:");
         System.getenv().keySet().forEach(System.out::println);
 
-        var token = System.getenv("GITHUB_TOKEN");
+        var token = System.getenv("INPUT_REPO-TOKEN");
         if (token == null) {
-            throw new IllegalArgumentException("GITHUB_TOKEN is not set");
+            throw new IllegalArgumentException("INPUT_REPO-TOKEN is not set");
         }
 
         GitHub github = GitHub.connectUsingOAuth(token);
