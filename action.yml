@@ -1,6 +1,12 @@
 # action.yml
 name: 'Print repo info'
 description: 'Print info about the repo'
+inputs:
+  repo-token:
+    description: 'GitHub token for the repository'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    GITHUB_TOKEN: ${{ inputs.repo-token }}

@@ -5,3 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: marcphilipp/issue-action@main
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
