@@ -20,6 +20,6 @@ public class App {
         System.out.println();
 
         System.out.println("Labels:");
-        repo.listLabels().forEach(System.out::println);
+        repo.listLabels().forEach(label -> System.out.printf("- %s%n", label.getName()));
     }
 }
